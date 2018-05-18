@@ -5,7 +5,7 @@ void BubbleSort(int *Data, int n);
 int main(void)
 {
     int i, n;
-    int Data[10];        
+    int Data[10];        // maximum Data amount = 10
     int MaxNum,MinNum;
     printf("請輸入資料筆數 n(<= 10): ");
     scanf("%d", &n);
@@ -15,8 +15,8 @@ int main(void)
         printf("請輸入第 %d 筆資料: ", i + 1);
         scanf("%d", &Data[i]);
     }
-	MaxNum = Data[0];   
-	MinNum = Data[0];  
+	MaxNum = Data[0];    // define and ensure max and mini number is countable integer
+	MinNum = Data[0];    // as above
 	    
     for(i=0;i<n;i++)
 	{
@@ -25,7 +25,7 @@ int main(void)
 		if(MaxNum<Data[i])
 		MaxNum=Data[i];
 	}
- 
+    // 執行氣泡排序
     BubbleSort(Data, n);
 
 
@@ -40,7 +40,7 @@ int main(void)
     system("pause");
 }
 
-void BubbleSort(int *Data, int n)          
+void BubbleSort(int *Data, int n)              //sorting from minimum to maximum
 {
     int i, j, temp;
     for (i = n - 1; i > 0; i--)
